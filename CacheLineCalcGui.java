@@ -6,6 +6,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import calculator.ArchitectureCacheLineCalculator;
 
 public class CacheLineCalcGui extends Application {
 

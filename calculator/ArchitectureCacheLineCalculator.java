@@ -1,3 +1,5 @@
+package calculator;
+
 public class ArchitectureCacheLineCalculator {
     public static double calculate(int value, int bits){
         double cacheLine = value/Math.pow(2, bits);
