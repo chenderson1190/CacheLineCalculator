@@ -6,11 +6,15 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import javafx.scene.Parent;
+import javafx.fxml.FXMLLoader;
 import calculator.ArchitectureCacheLineCalculator;
 
 public class CacheLineCalcGui extends Application {
+    public void start(Stage stage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("fxml_main.fxml"));
 
-    public void start(Stage stage){
+        Scene scene = new Scene(root, 300, 275);
         StringBuilder builder = new StringBuilder();
         TextField cacheData = new TextField("Cache Data");
         TextField numBits = new TextField("Number of Bits");
@@ -30,7 +34,7 @@ public class CacheLineCalcGui extends Application {
         });
 
         calcPane.getChildren().addAll(cacheData, numBits, calculate);
-        stage.setScene(new Scene(calcPane));
+        stage.setScene(scene);
         stage.show();
     }
     
